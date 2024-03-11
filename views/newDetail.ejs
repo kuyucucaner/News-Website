@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/cookie.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/newDetail.css">
+  <title>Haber Sitesi</title>
+</head>
+<body>
+  <%- include('../views/partials/navbar') %>
+  <%- include('../views/partials/currency') %>
+  <%- include('../views/partials/breakingNews') %>
+
+  <% if (news) { %>
+    <div class="container-wrapper">
+      <div class="news-container">
+        <img class="news-image" src="<%= news.ImageUrl %>" alt="News Image">
+        <h2 class="news-title"><%= news.Title %></h2>
+        <p class="news-info"><strong>Kategori:</strong> <%= news.CategoryName %></p>
+        <p class="news-content"><strong>Haber İçeriği:</strong> <%= news.ContentText %></p>
+        <p class="news-info"><strong>Yazar: <%= news.UserName %></strong></p>
+        <p class="news-info"><strong>Kaynak: <%= news.SourceName %></strong></p>
+      </div>
+      <ul class="suggested-news">
+        <h4 class="suggested-news-header"><b>Önerilen Haberler</b></h4>
+        <% for (let i = 0; i < relatedNews.length; i++) { %>
+            <li class="suggested-news-list">
+              <a href="<%= `http://localhost:3000/newDetail/${relatedNews[i].ID}` %>">
+              <h2 class="suggested-news-list-title"><%= relatedNews[i].Title %></h2>
+                <img class="suggested-news-list-image" src="<%= relatedNews[i].ImageUrl %>" alt="image">
+              </a>
+            </li>
+        <% } %>
+    </ul>  
+    </div>
+  <% } else { %>
+    <p class="no-news">No news details available.</p>
+  <% } %>
+  <script src="/javascripts/checkUser.js"></script>
+  <script src='/javascripts/cookies.js'></script>
+
+</body>
+</html>

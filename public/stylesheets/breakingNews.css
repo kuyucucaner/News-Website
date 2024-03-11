@@ -1,0 +1,33 @@
+body {
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .breakingNews {
+    background: #fff;
+    border-bottom: 1px solid #dfe3e8;
+    border-radius: 0;
+  }
+  
+  .breakingNews-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .breaking-news-item {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center !important; /* Use !important to forcefully override any conflicting styles */
+    background-color: #fda2a2;
+    text-transform: uppercase;
+
+  }
+  .breaking-href{
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #000000; /* Bağlantı rengi */
+    transition: color 0.3s ease-in-out; /* Geçiş efekti */
+  }
+ .breaking-href:hover {
+    color: #494949; /* Hover durumunda bağlantı rengi */
+    text-decoration: none;
+  }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/cookie.css">
+    <link rel="stylesheet" href="/stylesheets/science.css">
+    <title>Haber Sitesi</title>
+</head>
+<body>
+    <%- include('../views/partials/navbar') %>
+    <%- include('../views/partials/currency') %>
+    <%- include('../views/partials/breakingNews') %>
+
+    <% if (news && news.length > 0) { %>
+      <div class="science-news-container-title">
+        <h4><b>Bilim Haberleri</b></h4>
+      </div>
+        <div class="science-news-container">
+            <% for (let i = 0; i < news.length; i++) { %>
+                <div class="science-news-item">
+                    <a href="http://localhost:3000/newDetail/<%= news[i].ID %>">
+                      <img class="science-news-image"src="<%= news[i].ImageUrl %>" alt="Haber Resmi">
+                    </a>
+                    <h2 class="science-news-title"><%= news[i].Title %></h2>
+                    <p class="science-news-date">Yayınlanma Tarihi : <%= news[i].PublishDate.toISOString().split('T')[0] %></p>
+                    <p class="science-news-category">Kategori: <%= news[i].CategoryName %></p>
+                    <p class="science-news-author">Yazar: <%= news[i].UserName %></p>
+                    <p class="science-news-source">Kaynak: <%= news[i].SourceName %></p>
+
+                </div>
+            <% } %>
+        </div>
+  <% } else { %>
+      <p>Henüz haber bulunmamaktadır.</p>
+  <% } %>
+    
+     <%- include('../views/partials/footer') %>
+    <div id="cookie-popup">
+      <p>Çerezleri kabul etmek ister misiniz?</p>
+      <button class="acceptButton" onclick="acceptCookies()">Kabul Et</button>
+      <button class="deniedButton" onclick="deniedCookies()">Reddet</button>
+    </div>
+
+  <script src='/javascripts/cookies.js'></script>
+  <script src='/javascripts/checkUser.js'></script>
+</body>
+</html>
+

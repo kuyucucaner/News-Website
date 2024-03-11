@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/cookie.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/addNews.css">
+  <title>Haber Sitesi</title>
+</head>
+<body>
+  <%- include('../views/partials/navbar') %>
+  <div class="add-news-container">
+    <!-- örnek bir image koy -->
+    <img src="https://icdn.ensonhaber.com/resimler/diger/kok/2023/08/19/resim-2023-08-19-154934_0ba5e411.jpg" alt="Buraya haber fotosu gelecek!" id="news-previewImage" class="news-add-picture">
+    <div class="news-contact-info">
+      <form action="/addNews" method="post" id="addNewsForm" enctype="multipart/form-data">
+        <div class="file-input-wrapper">
+          <label for="imageUrl">Haber fotoğrafı seç</label>
+          <input type="hidden" id="existingImageUrl" name="existingImageUrl">
+          <input type="file" id="imageUrl" name="imageUrl" accept="image/*" >
+        </div>     
+        <label for="categoryID">Kategori:</label>
+        <select id="categoryID" name="categoryID" required>
+          <option value="1">Spor</option>
+          <option value="2">Ekonomi</option>
+          <option value="3">Teknoloji</option>
+          <option value="4">Eğlence</option>
+          <option value="5">Sağlık</option>
+          <option value="6">Bilim</option>
+        </select>
+        <label for="sourceID">Kaynak:</label>
+        <select id="sourceID" name="sourceID" required>
+          <option value="1">CanerHaber</option>
+        </select>
+        <label for="title">Başlık:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="contentText">Haber İçeriği:</label>
+        <textarea id="contentText" name="contentText" required></textarea>
+        <button id="submitButton" type="submit">Oluştur</button>
+      </form>
+    </div> 
+  </div>
+
+  <script src="/javascripts/checkUser.js"></script>
+  <script src='/javascripts/addNews.js'></script>
+</body>
+</html>

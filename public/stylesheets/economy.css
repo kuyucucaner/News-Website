@@ -1,0 +1,44 @@
+.economy-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .economy-news-item {
+    width: 30%; /* veya istediğiniz bir genişlik değeri */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .economy-news-image {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 5px;
+  }
+  .economy-news-container-title{
+    text-align: center;
+    padding-top: 10px;
+  }
+  .economy-news-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .economy-news-content {
+    color: #555;
+  }
+  
+  .economy-news-date,
+  .economy-news-category,
+  .economy-news-author,
+  .economy-news-source {
+    margin-top: 5px;
+    color: #888;
+  }
+  

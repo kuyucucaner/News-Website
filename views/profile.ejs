@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+
+</head>
+<body>
+
+   
+    <%- include('../views/partials/navbar') %>
+    <div class="update-profile-button">
+        <a href="/profile-edit" class="btn">Profili Güncelle</a>
+    </div>
+    <div class="profile-container">
+        <img src="<%= person.PhotoUrl %>" alt="Profil Resmi" class="profile-picture">
+        <div class="profile-name"> <%= person.FirstName ? person.FirstName : 'Ad' %> <%= person.LastName ? person.LastName : 'Soyad' %></div>
+        <% if (person.RoleID === 1) { %>
+            <div class="profile-job-title">Admin</div>
+        <% } else if (person.RoleID === 2) { %>
+            <div class="profile-job-title">Kullanıcı</div>
+        <% } else if (person.RoleID === 3) { %>
+            <div class="profile-job-title">Yazar</div>
+        <% } else { %>
+            <div class="profile-job-title">Belirtilmemiş</div>
+        <% } %>
+        <div class="profile-bio">
+            <%= person.Biography ? person.Biography : 'Biografi Boş' %>
+        </div>
+        <div class="contact-info">
+            <div><strong>Email :</strong>  <%= person.Email ? person.Email : 'Bilgi yok' %></div>
+            <div><strong>Kullanıcı Adı :</strong> <%= person.UserName %></div>
+            <div><strong>Yaş :</strong> <%= person.Age ? person.Age : '-' %></div>
+
+        </div>
+        <div class="social-links">
+            <% if (person.TwitterLink) { %>
+                <div class="social-links">
+                    <a href="<%= person.TwitterLink %>" class="social-link"  target="_blank"><i class="bi bi-twitter"></i></a>
+                </div>
+            <% } %>  
+            <% if (person.LinkedinLink) { %>
+                <div class="social-links">
+                    <a href="<%= person.LinkedinLink %>" class="social-link"  target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <script src='/javascripts/checkToken.js'></script>
+    <script src='/javascripts/checkImage.js'></script>
+</body>
+</html>

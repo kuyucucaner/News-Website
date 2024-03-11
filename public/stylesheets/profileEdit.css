@@ -1,0 +1,164 @@
+
+body{
+	font-family: 'Jost', sans-serif;
+}
+.update-profile-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.update-profile-button .btn {
+    float: right;
+    color: #ffffff; /* Beyaz renk */
+    background-color: #fd5555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; 
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.update-profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.update-profile-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.update-profile-job-title {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.update-profile-bio {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.update-contact-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.update-contact-info div {
+    margin-bottom: 10px;
+}
+
+.update-social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.update-social-link {
+    margin: 0 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+/* Input ve Form Tasarımı */
+.update-contact-info input[type="text"],
+.update-contact-info input[type="email"],
+.update-contact-info input[type="number"],
+.update-contact-info textarea,
+.update-contact-info input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Dosya Seçme Alanı Tasarımı */
+.update-contact-info input[type="file"] {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fcfcfc;
+    color: #ffffff;
+    cursor: pointer;
+}
+#previewImage {
+    width: 150px; /* istediğiniz genişliği ayarlayın */
+    height: 150px; /* istediğiniz yüksekliği ayarlayın */
+    border-radius: 50%; /* resmi yuvarlak yapmak için */
+    object-fit: cover; /* resmi uygun şekilde yerleştirme */
+    border: 2px solid #ccc; /* kenarlık rengi ve kalınlığı */
+  }
+
+/* Gönderme Butonu Tasarımı */
+.update-contact-info button {
+    width: 100%;
+    padding: 5px 15px;
+    background-color: #fd5555;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+/* Textarea Boyutu */
+.update-contact-info textarea {
+    resize: none; /* Boyut değiştirmeyi devre dışı bırakır */
+    width: 100%;
+    height: 100px; /* İstediğiniz yüksekliği ayarlayabilirsiniz */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.update-contact-info button:hover {
+    background-color: #e04444; /* Hover durumunda renk değişimi */
+}
+/* Dosya Seçme Inputu Tasarımı */
+.update-contact-info input[type="file"] {
+    display: none; /* Gerçek dosya seçme alanını gizler */
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-wrapper label {
+    display: inline-block;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: #fd8585;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 370px;
+}
+
+.file-input-wrapper label:hover {
+    background-color: #e66868; /* Hover durumunda renk değişimi */
+}

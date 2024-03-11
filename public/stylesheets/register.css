@@ -1,0 +1,136 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: rgb(241, 237, 237);
+}
+
+.form-check-label {
+    font-size: 17px;
+    height: auto;
+    color: #c62929;
+    display: inline-block;
+    align-items: center; 
+    vertical-align: middle; 
+    margin-left:40px;
+}
+
+.form-check-input {
+    width: 10%;
+    display: inline-block;
+    margin-left: 22px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.main{
+	width: 350px;
+	height: 500px;
+	background: linear-gradient(to bottom, #791919, #c62929, #791919);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+b {
+    color: #c62929;
+}
+.register-logo{
+    margin-left:50px;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 115%;
+}
+label {
+    margin: 20px;
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+/* Dropdown okunu gizleme */
+select::-ms-expand {
+    display: none;
+}
+
+
+select {
+    width: 85%;
+    padding: 10px;
+    margin: 20px auto;
+    display: flex;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #e0dede;
+}
+
+input  {
+    width: 80%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto; /* Aralığı ayarla */
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 80%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #c62929;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover{
+	background: #c62929;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #c62929;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-600px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}

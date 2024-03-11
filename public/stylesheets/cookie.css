@@ -1,0 +1,43 @@
+/* views/style.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8d8d8d; /* Change background color */
+    color: #fff; /* Change text color */
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Set a high z-index to make sure it appears on top */
+}
+
+#cookie-popup p {
+    margin: 0;
+}
+
+.acceptButton {
+    background-color: #4CAF50; /* Change button background color */
+    color: #fff; /* Change button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.deniedButton {
+    background-color: #ac3232; /* Change button background color */
+    color: #fff; /* Change button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#cookie-popup .acceptButton:hover {
+    background-color: #45a049; /* Darker color on hover */
+}
+#cookie-popup .deniedButton:hover {
+    background-color: #aa2727; /* Darker color on hover */
+}

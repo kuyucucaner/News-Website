@@ -1,0 +1,97 @@
+
+.slider-newspaper-container {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  background-color: #eeebeb;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-newspaper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-left:23px;
+}
+
+.slide-newspaper {
+  position: relative;
+  background-color: #e4e1e1;
+  border-radius: 10px;
+  margin-left:20px;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure the overlay doesn't overflow */
+
+}
+.overlay-link {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit the color from the parent */
+}
+.newspaper-overlay {
+  position: relative;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Adjust the alpha (last value) for darkness */
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+.slide-newspaper:hover .overlay-text {
+  opacity: 1;
+}
+.slide-newspaper:hover .image-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha for darkness */
+}
+.slide-button-next , .slide-button-prev {
+  background-color: #ffb6b6;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin: 0 10px; 
+  margin-top:20px;
+
+}
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-button-next:hover{
+  background-color: #fc7a7a;
+  border: white;
+}
+.slide-button-prev:hover{
+  background-color: #fc7a7a;
+  border: white;
+}
+.newspaper-title{
+  text-align: center;
+  padding-bottom: 10px;
+}
+.newspaper-image {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  border-radius: 10px;
+}

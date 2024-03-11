@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Adjust as desired */
+    margin: 0;
+    padding: 0;
+  }
+  .container-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* News Container */
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Optional rounded corners */
+  }
+  .suggested-news {
+    width: 25%; /* Adjust as needed */
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+ .suggested-news-list {
+    text-align: center;
+    padding: 15px; /* Add padding to content within each item */
+    border: 1px solid #ddd; /* Add a subtle border */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a faint shadow */
+  }
+.suggested-news-header{
+  text-align: center;
+  padding-top: 10px;
+}
+.suggested-news-list a {
+  color: #ffa0a0; /* Link rengi */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+  font-weight: bold; /* Yazıyı kalınlaştırır */
+  transition: 0.3s; /* Fareyle etkileşime girerken yumuşak geçiş sağlar */
+}
+
+.suggested-news-list a:hover {
+  color: #c62929; /* Fareyle üzerine gelindiğinde renk değişimi */
+  text-decoration: underline; /* Fareyle üzerine gelindiğinde alt çizgi ekler */
+}
+
+.suggested-news-list a:active {
+  color: #c62929; /* Tıklandığında renk değişimi */
+}
+  .suggested-news-list-title {
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Make headings bold */
+    margin-bottom: 5px; /* Add space below headings */
+  }
+  
+  .suggested-news-list-text{
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line spacing for better readability */
+  }
+  
+  .suggested-news-list-image {
+    width: 100%; /* Make images responsive (adjust as needed) */
+    height: 200px;
+    object-fit: cover; /* Crop images to fit container */
+    margin-bottom: 10px; /* Add space below images */
+  }
+  .news-image {
+    width: 100%; /* Adjust image width as needed */
+    margin-bottom: 15px;
+    max-height: 800px;
+  }
+  
+  .news-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .news-info {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .news-content {
+    font-size: 18px;
+  }
+  
+  /* No News Message */
+  .no-news {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  /* Media Queries (Optional) */
+  @media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .news-container {
+      width: 90%;
+    }
+    .news-title {
+      font-size: 20px;
+    }
+    .news-info, .news-content {
+      font-size: 16px;
+    }
+  }

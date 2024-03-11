@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profileEdit.css">
+
+</head>
+<body>
+    <div class="update-profile-container">
+        <img src="<%= person.PhotoUrl %>" alt="Profil Resmi" id='previewImage' class="update-profile-picture">
+        <% if (person.RoleID === 1) { %>
+            <div class="update-profile-job-title">Admin</div>
+        <% } else if (person.RoleID === 2) { %>
+            <div class="update-profile-job-title">Kullanıcı</div>
+        <% } else if (person.RoleID === 3) { %>
+            <div class="update-profile-job-title">Yazar</div>
+        <% } else { %>
+            <div class="update-profile-job-title">Belirtilmemiş</div>
+        <% } %>
+        <div class="update-contact-info">
+            <form id="updateProfileForm" action="/profile-update" method="POST" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <label for="photoUrl">Profil Resmi Seç</label>
+                    <input type="hidden" id="existingPhotoUrl" name="existingPhotoUrl" value="<%= person.PhotoUrl || null %>">
+                    <input type="file" id="photoUrl" name="photoUrl" accept="image/*">
+                </div>                
+                <div>
+                    <label for="firstName"><strong>Ad:</strong></label>
+                    <input type="text" id="firstName" name="firstName" value="<%= person.FirstName || '' %>">
+                </div>
+                <div>
+                    <label for="lastName"><strong>Soyad:</strong></label>
+                    <input type="text" id="lastName" name="lastName" value="<%= person.LastName || '' %>">
+                </div>
+                <div>
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" id="email" name="email" value="<%= person.Email || '' %>">
+                </div>
+                <div>
+                    <label for="userName" hidden><strong>Kullanıcı Adı:</strong></label>
+                    <input type="text" id="userName" name="userName" value="<%= person.UserName %>" hidden>
+                </div>
+                <div>
+                    <label for="age"><strong>Yaş:</strong></label>
+                    <input type="number" id="age" name="age" value="<%= person.Age || '' %>">
+                </div>
+                <div>
+                    <label for="biography"><strong>Biyografi:</strong></label>
+                    <textarea id="biography" name="biography"><%= person.Biography || '' %></textarea>
+                </div>
+                <div>
+                    <label for="twitterLink"><strong>Twitter Link:</strong></label>
+                    <input type="text" id="twitterLink" name="twitterLink" value="<%= person.TwitterLink || '' %>">
+                </div>
+                <div>
+                    <label for="linkedinLink"><strong>Linkedin Link:</strong></label>
+                    <input type="text" id="linkedinLink" name="linkedinLink" value="<%= person.LinkedinLink || '' %>">
+                </div>
+                <button type="submit" id="submitButton">Güncelle</button>
+            </form>
+        </div>
+    </div>
+    <script src='/javascripts/checkToken.js'></script>
+    <script src='/javascripts/profileEdit.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .currency {
+    background: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 1px solid #dfe3e8;
+    border-radius: 0;
+  }
+  
+  .currency-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .currency-item {
+    margin-right: auto;
+    margin-left: auto; /* İstediğiniz boşluk değerini ayarlayabilirsiniz */
+  }
+  
+  .currency-link-currency-usd,
+  .currency-link-currency-eur,
+  .currency-link-currency-gbp,
+  .currency-link-currency-aud,
+  .currency-link-currency-jpy,
+  .currency-link-currency-cad,
+  .currency-link-currency-chf,
+  .currency-link-currency-nzd,
+  .currency-link-currency-amd {
+    display: flex;
+    align-items: center; /* Öğeleri dikey ortalamak için */
+    /* İçeriğinizi stilize etmek için gerekirse ek özellikler ekleyebilirsiniz */
+  }
+  

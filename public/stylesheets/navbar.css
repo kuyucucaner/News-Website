@@ -1,0 +1,204 @@
+body {
+	font-family: 'Jost', sans-serif;
+}
+.form-control {
+	box-shadow: none;
+	border-radius: 4px;        
+	border-color: #dfe3e8;
+}
+.searchButton {
+    border-radius: 5px;
+    border: 1px solid rgb(53, 53, 53);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.searchButton i.fa-search {
+    font-size: 14px; /* Font Awesome simgesinin boyutunu belirleyin */
+}
+.searchButton:hover {
+    background-color: #ffa0a0;
+}
+.search-form
+.search-form input {
+    font-size: 14px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+	padding: 3px;
+
+}
+.search-form {
+    display: flex;
+    align-items: center;
+}
+.navbar {
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #dfe3e8;
+	border-radius: 0;
+}
+.navbar-nav a {
+    font-size: 17px;
+    margin-left:25px;
+}
+.navbar .navbar-brand {
+	font-size: 25px;
+    font-weight: bold;
+	padding-left: 0;
+	padding-right: 50px;
+}
+.navbar .navbar-brand b {
+	color: #c62929;		
+}
+.navbar a, .navbar a:active {
+	color: #999;
+	background: transparent;
+}
+.navbar .navbar-nav a:hover, .navbar .navbar-nav a:focus {
+	color: #c62929 !important;
+}
+.navbar .navbar-nav > a.active, .navbar .navbar-nav.show > a {
+	color: #c62929 !important;
+	background: transparent !important;
+}
+.navbar .form-inline .input-group-text {
+	box-shadow: none;
+	border-radius: 2px 0 0 2px;
+	background: #f5f5f5;
+	border-color: #dfe3e8;
+	font-size: 16px;
+}
+.navbar .form-inline i {
+	font-size: 16px;
+}
+.navbar .form-inline .btn {
+	border-radius: 2px;
+	color: #fff;
+	border-color: #c62929;
+	background: #c62929;
+	outline: none;
+}
+.btn {
+	margin-left:40px;
+
+}
+
+.navbar .form-inline .btn:hover, .navbar .form-inline .btn:focus {
+	border-color: #c62929;
+	background: #c62929;
+}
+.navbar .search-form {
+	display: inline-block;
+}
+.navbar .search-form .btn {
+	margin-left: 4px;
+}
+.navbar .search-form .form-control {
+	border-radius: 2px;
+}
+.navbar .login-form .input-group {
+	margin-right: 4px;
+	float: left;
+}
+.navbar .login-form .form-control {
+	max-width: 158px;
+	border-radius: 0 2px 2px 0;
+}    	
+.navbar .navbar-right .dropdown-toggle::after {
+	display: none;
+}
+.navbar .dropdown-menu {
+	font-size: 14px;
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	padding: 6px 20px;
+}
+.exitButton {
+	display: none;
+}
+.navbar .login-dropdown .dropdown-menu {
+	width: 700px;
+	padding: 20px;
+	left: auto;
+	right: 0;        
+}
+.navbar .login-dropdown .dropdown-toggle::after {
+	display: none;
+}
+.form-check-label {
+    font-size: 17px;
+    height: auto;
+    color: #c62929;
+    display: inline-block;
+    align-items: center; 
+    vertical-align: middle; 
+}
+/* Navbar içindeki ml-auto sınıfına sahip elemanları hizalamak için */
+.navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+}
+
+/* Kayıt Ol, Profil, Çıkış Yap bağlantılarını düzenlemek için */
+.navbar-nav.ml-auto a {
+    margin-left: 15px; /* İstediğiniz boşluk miktarını ayarlayabilirsiniz */
+}
+
+/* Dropdown menüsündeki bağlantıları düzenlemek için */
+.navbar .login-dropdown .dropdown-menu a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Büyük ekranlarda bağlantıların yan yana olmasını sağlamak için */
+@media (min-width: 992px) {
+    .navbar-nav.ml-auto a {
+        margin-left: 20px; /* İstediğiniz boşluk miktarını ayarlayabilirsiniz */
+    }
+}
+
+/* Ekstra küçük ekranlarda bağlantıların düzenini ayarlamak için */
+@media (max-width: 576px) {
+    .navbar-nav.ml-auto {
+        flex-direction: column;
+    }
+    .navbar-nav.ml-auto a {
+        margin-left: 0;
+        margin-bottom: 10px; /* İstediğiniz boşluk miktarını ayarlayabilirsiniz */
+    }
+}
+
+.form-check-input {
+    width:30px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px){
+	.search-form .input-group {
+		width: 300px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px){
+	.navbar .dropdown-menu {
+		width: 100%;
+		background: transparent;
+		padding: 10px 20px;
+	}
+	.navbar .input-group {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.navbar .input-group .form-control {
+		max-width: none;			
+	}
+	.navbar .login-form .btn {
+		width: 100%;
+	}
+}

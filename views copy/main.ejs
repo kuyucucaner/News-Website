@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/cookie.css">
+    <title>Haber Sitesi</title>
+</head>
+<body>
+    <%- include('../views/partials/navbar') %>
+    <%- include('../views/partials/currency') %>
+    <%- include('../views/partials/slide') %>
+    <%- include('../views/partials/newspaper') %>
+    <div id="cookie-popup">
+      <p>Çerezleri kabul etmek ister misiniz?</p>
+      <button class="acceptButton" onclick="acceptCookies()">Kabul Et</button>
+      <button class="deniedButton" onclick="deniedCookies()">Reddet</button>
+    </div>
+
+  <script src='./javascripts/cookies.js'></script>
+  <script src='./javascripts/checkUser.js'></script>
+</body>
+</html>
+

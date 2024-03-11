@@ -1,0 +1,69 @@
+
+.profile-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.update-profile-button .btn {
+    float: right;
+    color: #ffffff; /* Beyaz renk */
+    background-color: #fd5555;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; 
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-job-title {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.profile-bio {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contact-info div {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-link {
+    margin: 0 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.5em;
+}

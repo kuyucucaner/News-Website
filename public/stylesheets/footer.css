@@ -1,0 +1,74 @@
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Footer Title */
+.footer-title a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.footer-title b {
+    color: #c62929;
+}
+
+.footer-title i {
+    margin-right: 5px;
+    font-size: 1.2em; /* İkon boyutunu biraz büyüttüm */
+}
+
+/* Footer Contact, Footer Sponsor, Footer App */
+.footer-contact,
+.footer-sponsor,
+.footer-app {
+    flex: 1;
+    margin: 0 20px; /* Boşlukları düzenledim */
+}
+
+/* Footer Contact, Footer Sponsor, Footer App - Başlık */
+.footer-contact p,
+.footer-sponsor p,
+.footer-app p {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1em; /* Başlık boyutunu biraz büyüttüm */
+}
+
+/* Footer Listeler */
+.footer-contact ul,
+.footer-sponsor ul,
+.footer-app ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer Listeler - Linkler */
+.footer-contact a,
+.footer-sponsor a,
+.footer-app a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Hover efekti için geçiş eklendi */
+}
+
+.footer-contact a:hover,
+.footer-sponsor a:hover,
+.footer-app a:hover {
+    text-decoration: underline;
+    color: #c62929; /* Hover rengini güncelledim */
+}

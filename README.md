@@ -3,7 +3,7 @@
 **News Website** is a dynamic and role-based news platform that allows users to register either as a reader or as a journalist.  
 Writers can publish articles while readers can explore news by category, read full articles, and follow links to newspapers.  
 The application also includes live currency rates, profile management, and secure authentication using JWT.
-
+ 
 ---
 
 ## 🚀 Features
